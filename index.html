@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NestEgg</title>
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥚</text></svg>">
+</head>
+
+<body>
+    <div id="app" class="app-container">
+        <!-- Top Navigation / Status bar -->
+        <header class="top-bar">
+            <div class="stat-pill streak-pill">
+                <i class="fa-solid fa-fire" style="color: #ff9600;"></i> <span id="streak-count"
+                    class="streak-text">12</span>
+            </div>
+            <div class="stat-pill score-pill">
+                <i class="fa-solid fa-gem" style="color: #1cb0f6;"></i> <span id="nest-score" class="score-text">1,450</span>
+            </div>
+            <div class="profile-pic" id="top-profile-btn" style="cursor: pointer;">
+                <img id="top-avatar-img" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=7fdcf4" alt="Profile">
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-content" class="main-content">
+            <!-- Dashboard View -->
+            <section id="dashboard" class="view active-view">
+                <div class="main-card savings-card fade-in">
+                    <h2 class="card-title">Total NestEgg</h2>
+                    <h1 class="savings-amount">₹12,500</h1>
+                    <p class="savings-subtitle">You're doing great!</p>
+                    <div class="mascot-container shake-animation">
+                        <div class="egg-mascot">🥚</div>
+                    </div>
+                </div>
+
+                <div class="action-section slide-up">
+                    <h3 class="section-title">Quick Save</h3>
+                    <div class="quick-save-grid">
+                        <button class="duo-btn save-btn" data-amount="50">
+                            <span class="btn-text">₹50</span>
+                        </button>
+                        <button class="duo-btn save-btn blue-btn" data-amount="100">
+                            <span class="btn-text">₹100</span>
+                        </button>
+                        <button class="duo-btn save-btn purple-btn" data-amount="500">
+                            <span class="btn-text">₹500</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="progress-section slide-up delay-1">
+                    <h3 class="section-title">Next Milestone</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 75%;"></div>
+                    </div>
+                    <p class="progress-text">₹12,500 / ₹15,000 to Silver Tier 🥈</p>
+                </div>
+            </section>
+
+            <!-- Invest View -->
+            <section id="invest" class="view hide-view">
+                <h2 class="page-title fade-in">Grow Your Egg</h2>
+
+                <div class="invest-cards slide-up">
+                    <div class="main-card invest-card green-card">
+                        <div class="invest-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                        <div class="invest-info">
+                            <h3>Mutual Funds</h3>
+                            <p>Good for long term. 10-12% expected return.</p>
+                        </div>
+                        <button class="duo-btn small-btn">Start</button>
+                    </div>
+
+                    <div class="main-card invest-card orange-card delay-1">
+                        <div class="invest-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+                        <div class="invest-info">
+                            <h3>Fixed Deposit</h3>
+                            <p>Safe and steady. 7-8% guaranteed return.</p>
+                        </div>
+                        <button class="duo-btn small-btn orange-btn">Start</button>
+                    </div>
+
+                    <div class="main-card invest-card purple-card delay-2">
+                        <div class="invest-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div class="invest-info">
+                            <h3>Daily SIP</h3>
+                            <p>Auto-invest ₹50 daily in top funds.</p>
+                        </div>
+                        <button class="duo-btn small-btn purple-btn">Setup</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leaderboard View -->
+            <section id="leaderboard" class="view hide-view">
+                <h2 class="page-title fade-in">NestScore Leaders</h2>
+
+                <div class="tabs slide-up">
+                    <button class="tab-btn active-tab" data-tab="friends">Friends</button>
+                    <button class="tab-btn" data-tab="global">Global</button>
+                </div>
+
+                <div class="leaderboard-list slide-up delay-1">
+                    <!-- Leaderboard Item 1 -->
+                    <div class="leader-item gold">
+                        <div class="rank">1</div>
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Anya&backgroundColor=ffdf00"
+                            class="leader-avatar" alt="Anya">
+                        <div class="leader-info">
+                            <h4 class="leader-name">Anya Sharma</h4>
+                            <p class="leader-streak"><i class="fa-solid fa-fire" style="color: #ff9600;"></i> 45 Day
+                                Streak</p>
+                        </div>
+                        <div class="leader-score">
+                            <span>2,850</span> <i class="fa-solid fa-gem" style="color: #1cb0f6;"></i>
+                        </div>
+                    </div>
+
+                    <!-- Leaderboard Item 2 -->
+                    <div class="leader-item silver">
+                        <div class="rank">2</div>
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rahul&backgroundColor=c0c0c0"
+                            class="leader-avatar" alt="Rahul">
+                        <div class="leader-info">
+                            <h4 class="leader-name">Rahul Verma</h4>
+                            <p class="leader-streak"><i class="fa-solid fa-fire" style="color: #ff9600;"></i> 30 Day
+                                Streak</p>
+                        </div>
+                        <div class="leader-score">
+                            <span>2,100</span> <i class="fa-solid fa-gem" style="color: #1cb0f6;"></i>
+                        </div>
+                    </div>
+
+                    <!-- Leaderboard Item 3 -->
+                    <div class="leader-item bronze">
+                        <div class="rank">3</div>
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=7fdcf4"
+                            class="leader-avatar" alt="You">
+                        <div class="leader-info">
+                            <h4 class="leader-name">You</h4>
+                            <p class="leader-streak"><i class="fa-solid fa-fire" style="color: #ff9600;"></i> 12 Day
+                                Streak</p>
+                        </div>
+                        <div class="leader-score">
+                            <span>1,450</span> <i class="fa-solid fa-gem" style="color: #1cb0f6;"></i>
+                        </div>
+                    </div>
+
+                    <!-- Leaderboard Item 4 -->
+                    <div class="leader-item">
+                        <div class="rank">4</div>
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha&backgroundColor=ffdfba"
+                            class="leader-avatar" alt="Sneha">
+                        <div class="leader-info">
+                            <h4 class="leader-name">Sneha R.</h4>
+                            <p class="leader-streak"><i class="fa-solid fa-fire" style="color: #ff9600;"></i> 5 Day
+                                Streak</p>
+                        </div>
+                        <div class="leader-score">
+                            <span>950</span> <i class="fa-solid fa-gem" style="color: #1cb0f6;"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-target="dashboard">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" data-target="invest">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Invest</span>
+            </button>
+            <button class="nav-item" data-target="leaderboard">
+                <i class="fa-solid fa-ranking-star"></i>
+                <span>Board</span>
+            </button>
+        </nav>
+
+        <!-- Profile Screen -->
+        <div id="profile-screen" class="overlay-screen hide-view">
+            <div class="profile-header-bar">
+                <button class="icon-btn close-profile-btn" id="close-profile"><i class="fa-solid fa-xmark"></i></button>
+                <h2 class="auth-title" style="margin-bottom:0;">Settings</h2>
+                <div style="width:40px;"></div> <!-- Spacer for flex balance -->
+            </div>
+            
+            <div class="profile-avatar-container" id="profile-avatar-edit-btn">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=7fdcf4" alt="Edit Avatar" id="profile-edit-avatar">
+                <div class="avatar-edit-badge"><i class="fa-solid fa-camera"></i></div>
+            </div>
+            <p style="color: var(--clr-text-light); font-size: 0.9rem; font-weight: 700; text-align: center; margin-bottom: 20px;">Tap avatar to shuffle</p>
+            
+            <div class="auth-body" style="padding: 0 30px;">
+                <div class="input-group">
+                    <label class="input-label">Full Name</label>
+                    <input type="text" class="duo-input" id="profile-name" value="Felix Nest">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Email Address</label>
+                    <input type="email" class="duo-input" id="profile-email" value="felix@nestegg.app">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Phone Number</label>
+                    <input type="tel" class="duo-input" id="profile-phone" value="9876543210">
+                </div>
+                
+                <button class="duo-btn profile-save-btn" id="profile-save-btn" style="margin-top:20px;">Save Changes</button>
+            </div>
+        </div>
+
+        <!-- Toast Notification Container -->
+        <div id="toast-container" class="toast-container"></div>
+        
+        <!-- Auth Screen -->
+        <div id="auth-screen" class="overlay-screen hide-view">
+            <div class="auth-header">
+                <div class="egg-logo-large">🥚</div>
+                <h2 class="auth-title">Welcome to NestEgg</h2>
+                <p class="auth-subtitle">Build your future, one tap at a time.</p>
+            </div>
+            
+            <div class="auth-tabs">
+                <button class="auth-tab-btn active-tab" id="tab-signup">Sign Up</button>
+                <button class="auth-tab-btn" id="tab-login">Log In</button>
+            </div>
+
+            <div class="auth-body">
+                <div class="input-group">
+                    <label class="input-label">Email or Mobile Number</label>
+                    <input type="text" class="duo-input" placeholder="e.g. 9876543210" id="auth-username">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Password</label>
+                    <input type="password" class="duo-input" placeholder="Password" id="auth-password">
+                </div>
+            </div>
+
+            <div class="auth-footer">
+                <button class="duo-btn auth-submit-btn" id="auth-submit">Continue</button>
+            </div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="overlay-screen active-overlay">
+            <div class="loading-content">
+                <div class="mascot-bounce">🥚</div>
+                <h1 class="loading-title">NestEgg</h1>
+                <div class="loading-dots">
+                    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
