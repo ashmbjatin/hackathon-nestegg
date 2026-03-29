@@ -31,7 +31,6 @@ The app was engineered as a lightweight front-end prototype structure and doesn'
 
 ## Built With
 - **HTML5** & **Vanilla CSS3**
-- **Vanilla JavaScript** (State manipulation)
-- **[Canvas Confetti](https://github.com/catdad/canvas-confetti)** (Interactions)
+- **Vanilla JavaScript** (State manipulation) 
 - **[DiceBear API](https://www.dicebear.com/)** (Dynamic Avatars)
 - **Google Fonts** (Nunito)
