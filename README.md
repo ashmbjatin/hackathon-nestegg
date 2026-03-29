@@ -29,7 +29,7 @@ The app was engineered as a lightweight front-end prototype structure and doesn'
 - **Vanilla CSS System**: Built from the ground up using a strict set of CSS variables to simulate "chunky", highly-clickable 3D components without using bloated UI frameworks.
 - **Overlay Engine**: Clean overlay architectures manage the Loading Splash, the unified Login/Signup gateway, and the Profile Settings view.  
 
-## 🛠 Built With
+## Built With
 - **HTML5** & **Vanilla CSS3**
 - **Vanilla JavaScript** (State manipulation)
 - **[Canvas Confetti](https://github.com/catdad/canvas-confetti)** (Interactions)
